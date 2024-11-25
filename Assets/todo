@@ -1,0 +1,41 @@
+1- 
+
+||Pool -> Get or create 
+||Prototype -> this.clone
+
+||Service Locator -> Static providers
+||Flyweight -> single instance for config 
+
+health points unified -> wrapper decorator -> interface to handle hp and wrappers on top of that
+health for structures
+die and respawn after a few seconds
+enemies dont self destroy
+enemies target alive structures
+
+to spawn -> spawn service {
+if in pool -> reset and return inst
+else take enemy base -> clone prototype
+}
+on spawn of enemy {
+    tower location service {
+        find nearest to location of spawner 
+    }
+}
+
+enemy has flyweight config
+
+2-
+
+||Command (se recomienda en forma de command console) -> use to move, cmd move, cmd attack etc
+||Factory -> return new inst -> used to spawn new towers all the time
+||State -> enemy states like attack and flee
+||State Machine -> FSM with transitions and shit
+||Strategy -> interface to create impls
+
+on spawn of tower {
+    add to tower location service location of tower
+}
+
+spawn randomly a button {
+    on click -> set wrapper of towers with shield
+}
