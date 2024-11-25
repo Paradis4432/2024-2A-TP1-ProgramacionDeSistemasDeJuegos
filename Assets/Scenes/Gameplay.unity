@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 351200449}
   - component: {fileID: 351200450}
   - component: {fileID: 351200451}
+  - component: {fileID: 351200452}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -195,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6914964b26b471ab8381c385e78be9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 3506025591740287068, guid: 11c341076dc8a4546bd30c80556afeb9, type: 3}
 --- !u!114 &351200449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +232,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1652481310684c89bfac9d8910099b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 6144691500021807303, guid: 104f8d205e1a7cf4093c2278aaf62b91, type: 3}
+--- !u!114 &351200452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351200435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b1433b0a314b12a161e9a10cff24d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Fighter>k__BackingField: {fileID: 3506025591740287068, guid: 11c341076dc8a4546bd30c80556afeb9, type: 3}
+  <Tower>k__BackingField: {fileID: 6144691500021807303, guid: 104f8d205e1a7cf4093c2278aaf62b91, type: 3}
 --- !u!1 &439203392
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &629193520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +1003,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.94
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
