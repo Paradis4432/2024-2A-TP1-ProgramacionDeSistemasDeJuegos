@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Scenes.Gameplay.Entities {
     public abstract class AbstractEntity : MonoBehaviour, IEntity {
-        public IHealth Health { get; private set; }
+        public IHealth Health { get; protected set; }
 
         private void Awake() {
             Health ??= new HealthStructure();

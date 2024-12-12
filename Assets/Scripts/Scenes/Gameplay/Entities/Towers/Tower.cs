@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Scenes.Gameplay.Attributes;
 using Scenes.Gameplay.Cmds;
@@ -10,6 +11,8 @@ using Scenes.Gameplay.Fsm.States.Impls.Tower;
 using Scenes.Gameplay.Repositories.Impls;
 using Scenes.Gameplay.Strategies.Enemies;
 using Scenes.Gameplay.Strategies.Towers;
+using Scenes.Gameplay.Structures.Wrappers;
+using Scenes.Gameplay.Structures.Wrappers.Impls;
 using Scenes.Prototypes;
 using UnityEngine;
 
@@ -55,7 +58,9 @@ namespace Scenes.Gameplay.Entities.Towers {
         }
 
         private void SetShielded(bool s) {
-            Shield = s;
+            if (s) Health = new TowerShieldWrapper(Health);
+            else if (Health is IWrapper w) Health = w.Unwrap();
+            else throw new Exception("health is somehow not a wrapper, this should never happen");
         }
 
         private void Update() {
