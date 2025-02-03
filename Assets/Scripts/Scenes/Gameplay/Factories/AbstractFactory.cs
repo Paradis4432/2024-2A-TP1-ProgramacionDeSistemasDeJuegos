@@ -7,7 +7,8 @@ using Tools;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Scenes.Gameplay.Factories {
+namespace Scenes.Gameplay.Factories 
+{
     public abstract class AbstractFactory<T> : MonoBehaviour, IValidate where T : Object, IPrototype<T> {
         private static readonly Dictionary<Type, AbstractFactory<T>> Factories = new();
 
